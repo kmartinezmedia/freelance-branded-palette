@@ -1,0 +1,63 @@
+<ion-view view-title="Gallery">
+<ion-content class="content gallery">
+	<div class="row responsive-sm" ng-repeat="insta in instagrams" ng-if="$index % 4 === 0">
+		<div class="col col-25" ng-if="$index < instagrams.length">
+			<div class="list card">
+			  <div class="item item-image" style="height: 240px;" ng-background="{{instagrams[$index].images.standard_resolution.url}}" ng-click="openModal(instagrams[$index].images.standard_resolution.url)">
+			  </div>
+				<div class="item tabs tabs-secondary tabs-icon-left">
+			    <a class="tab-item" href="#">
+			      {{instagrams[$index].likes.count}} likes
+			    </a><a class="tab-item" href="{{instagrams[$index].link}}" target="_blank">
+			      <i class="icon ion-thumbsup"></i>
+			      Like
+			    </a>
+			  </div>
+			</div>
+		</div>
+		<div class="col col-25" ng-if="$index+1 < instagrams.length">
+			<div class="list card">
+			  <div class="item item-image" style="height: 240px;" ng-background="{{instagrams[$index+1].images.standard_resolution.url}}" ng-click="openModal(instagrams[$index+1].images.standard_resolution.url)">
+			  </div>
+				<div class="item tabs tabs-secondary tabs-icon-left">
+			    <a class="tab-item" href="#">
+			      {{instagrams[$index+1].likes.count}} likes
+			    </a><a class="tab-item" href="{{instagrams[$index+1].link}}" target="_blank">
+			      <i class="icon ion-thumbsup"></i>
+			      Like
+			    </a>
+			  </div>
+			</div>
+		</div>
+		<div class="col col-25" ng-if="$index+2 < instagrams.length">
+			<div class="list card">
+			  <div class="item item-image" style="height: 240px;" ng-background="{{instagrams[$index+2].images.standard_resolution.url}}" ng-click="openModal(instagrams[$index+2].images.standard_resolution.url)">
+			  </div>
+				<div class="item tabs tabs-secondary tabs-icon-left">
+			    <a class="tab-item" href="#">
+			      {{instagrams[$index+2].likes.count}} likes
+			    </a><a class="tab-item" href="{{instagrams[$index+2].link}}" target="_blank">
+			      <i class="icon ion-thumbsup"></i>
+			      Like
+			    </a>
+			  </div>
+			</div>
+		</div>
+		<div class="col col-25" ng-if="$index+3 < instagrams.length">
+			<div class="list card">
+			  <div class="item item-image" style="height: 240px;" ng-background="{{instagrams[$index+3].images.standard_resolution.url}}" ng-click="openModal(instagrams[$index+3].images.standard_resolution.url)">
+			  </div>
+				<div class="item tabs tabs-secondary tabs-icon-left">
+			    <a class="tab-item" href="#">
+			      {{instagrams[$index+3].likes.count}} likes
+			    </a><a class="tab-item" href="{{instagrams[$index+3].link}}" target="_blank">
+			      <i class="icon ion-thumbsup"></i>
+			      Like
+			    </a>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+</ion-content>
+</ion-view>

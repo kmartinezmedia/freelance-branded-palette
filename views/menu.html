@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="container">
+    <ul class="navbar-list">
+      <li class="navbar-item" ng-repeat="menu in menuItems" ng-init="open_$index = false;" ng-mouseover="openPopover($index)">
+        <a class="navbar-link" ng-class="{'active': currentState.name == menu.name}"ng-click="goTo(menu, null)">{{menu.label}}</a>
+        <div class="popover" ng-if="menu.hasSubs" ng-class="{'open': open_{{$index}}==true}">
+          <ul class="popover-list">
+            <li class="popover-item" ng-repeat="sub in menu.sub">
+              <a class="popover-link" ng-class="{'active': sub.id == activeSub}" ng-click="goTo(menu, sub.id)" >{{sub.data.name}}</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <div class="cart animated fadeInDown" ui-sref="app.checkout">
+      <img src="img/shopping_cart.svg" alt="" class="shopping-cart">
+      <span ng-hide="cart.length == 0" class="cart-number animated fadeIn">{{cart.length}}</span>
+    </div>
+  </div>
+</nav>
+<div ui-view="app" ng-class="{'hasMobile': isMobile}"></div>
+<div class="mobile-tabs" ng-if= "isMobile">
+  <ul>
+    <li ng-repeat="menu in menuItems" ng-style="{width: windowWidth/menuItems.length + 'px'}" ng-class="{'active': currentState.name == menu.name}" ng-click="goTo(menu, null)" >{{menu.label}}</li>
+  </ul>
+</div>

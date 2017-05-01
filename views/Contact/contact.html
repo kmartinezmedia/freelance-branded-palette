@@ -1,0 +1,42 @@
+<ion-view view-title="Contact">
+	<ion-content class="content">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3591.065888655101!2d-80.12240028497756!3d25.83437408360385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b322ab4bc9b7%3A0xa1056ca051ec0a6b!2s5445+Collins+Ave+%23604%2C+Miami%2C+FL+33140!5e0!3m2!1sen!2sus!4v1446080616621" width="100%" height="450" frameborder="0" style="pointer-events:none; border:0" allowfullscreen></iframe>
+	<div class="row padding-top responsive-sm">
+		<div class="col">
+			<h1 class="align-center">Get in touch</h1>
+			<p class="align-center">AlambiQ Incorporated</p>
+			<p class="align-center">5445 Collins Avenue, Suite 604</p>
+			<p class="align-center">Miami Beach, Florida 33140</p>
+			<p class="align-center">Direct: <a href="tel:786-566-2001">786.566.2001</a></p>
+			<p class="align-center">Fax: 786.999.0900</p>
+		</div>
+		<div class="col">
+
+			<form ng-controller="FormController" method="post" name="form" role="form"  ng-submit="submitForm()" novalidate>
+				<p ng-show="errorName">{{errorName}}</p>
+				<p ng-show="errorMessage">{{errorMessage}}</p>
+				<p ng-show="errorEmail">{{errorEmail}}</p>
+				<p ng-show="successMessage">{{successMessage}}</p>
+				<p ng-show="invalidForm">{{invalidForm}}</p>
+        <!-- <p ng-show="notFilled">Oops you need to fill out all the required fields below</p> -->
+		        <div class="list">
+		            <label class="item item-input item-stacked-label">
+		                <span class="input-label">Your Name*</span>
+		                <input id="name" type="text" name="name" ng-model="input.name" placeholder="Jane Doe" required>
+		            </label>
+		            <label class="item item-input item-stacked-label">
+		                <span class="input-label">Email*</span>
+		                <input id="email" type="email" name="email" ng-model="input.email" placeholder="jane@email.com" required>
+		            </label>
+		            <label class="item item-input item-stacked-label">
+		                <span class="input-label">Message*</span>
+		                <textarea id="messsage" name="message" ng-model="input.message" cols="30" rows="10" placeholder="Let's get in touch!" required></textarea>
+		            </label>
+		            <input type="submit" name="submit" value="Submit" class="button button-balanced button-block">
+		        </div>
+		  	</form>
+		</div>
+	</div>
+		</div>
+	</ion-content>
+</ion-view>

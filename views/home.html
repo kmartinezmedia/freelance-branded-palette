@@ -1,0 +1,15 @@
+<div class="home animated fadeIn">
+  <div class="hero-image" ng-background="img/home_hero.jpg">
+  <img src="img/logo.svg" alt="" class="logo animated fadeIn">
+</div>
+<div class="container">
+  <div class="row triple-gap-top triple-gap-bottom">
+		<div 	class="product-card animated fadeIn"
+      ng-repeat="brand in brands"
+			ui-sref="app.brand({id: brand.id})">
+			<!-- <img ng-src="{{brand.data.logo._url}}" alt="" class="u-full-width"> -->
+			<div class="image" ng-background="{{brand.image}}"></div>
+		</div>
+  	</div>
+</div>
+</div>

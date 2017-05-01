@@ -1,0 +1,1 @@
+!function(){"use strict";angular.module("app.services").factory("BrandService",["ParseRecord",function(e){return e.extend("Brand",["subdomain","name","logo"],{priceWithTaxes:function(){return 1.2*this.price}},{getById:function(e){return this.query().equalTo("objectId",e).find()}})}])}();

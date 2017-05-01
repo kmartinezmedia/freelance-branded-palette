@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Branded Palette</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ngDialog.css">
+    <link rel="stylesheet" href="css/ngDialog-theme-default.css">
+  </head>
+  <body ng-app="brandedPalette" ng-class="{'body-overflow': !isPhone}">
+    <div ui-view="menu" ng-mouseover="closePopover()"></div>
+    <script>
+     !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+     (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+     r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+     }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-XXXXX-X');
+     ga('send', 'pageview');
+    </script>
+    <script src="//www.parsecdn.com/js/parse-1.2.15.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-animate.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <script src="lib/ng-lodash.min.js"></script>
+    <script src="lib/ngDialog.min.js"></script>
+    <script src="lib/classie.js"></script>
+    <script src="lib/move.min.js"></script>
+    <script src="lib/dynamics.min.js"></script>
+    <script src="lib/localStorage.min.js"></script>
+
+    <!-- Data Models -->
+    <!-- App core & templates -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/min/app.controllers-min.js"></script>
+    <script src="scripts/min/app.services-min.js"></script>
+    <script src="scripts/min/parse.services-min.js"></script>
+    <script src="scripts/min/brand.service-min.js"></script>
+    <script src="scripts/min/category.service-min.js"></script>
+    <script src="scripts/min/product.service-min.js"></script>
+    <script src="scripts/min/cart.service-min.js"></script>
+    <script src="scripts/min/menu.service-min.js"></script>
+    <!-- Controllers -->
+    <script src="views/Gallery/min/gallery.controller-min.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<div class="container triple-gap-top animated fadeIn">
+	<h1>Shopping Cart</h1>
+			<table class="u-full-width" ng-show="cart.length > 0">
+			  <thead>
+			    <tr>
+			    	<th></th>
+			      <th >Name</th>
+			      <th>Brand</th>
+			      <th>Price</th>
+			      <th>Quantity</th>
+			      <th></th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr ng-repeat="product in cart">
+			    	<td>
+			    		<img ng-src="{{product.image}}" alt="" style="width: 40px; height: 40px;">
+			    	</td>
+			    	<td><a ui-sref="app.product({id:product.productId, brandId: product.brandId, quantity: product.quantity})">{{product.name}}</a></td>
+			    	<td>{{product.brandName}}</td>
+			      <td>{{product.price | currency}}</td>
+			      <td>{{product.quantity | number}}</td>
+			      <td><button class="button-secondary pull-right" ng-click="removeFromCart(product)">Remove</button></td>
+			    </tr>
+			  </tbody>
+			</table>
+			<div class="row" ng-show="cart.length > 0">
+				<h4 class="align-right">Total: {{total | currency}}</h4>
+				<button class="button-primary pull-right" ng-click="checkout()">continue to Checkout</button>
+			</div>
+</div>

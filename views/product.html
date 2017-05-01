@@ -1,0 +1,72 @@
+<div class="container triple-gap-top">
+    <div class="row">
+
+    	<div class="six columns padding">
+    		<div class="product-image">
+    			<div class="overlay-logo" ng-background="{{overlayBrands.selected}}"></div>
+    			<img ng-src="{{brandDropdown.selected.image}}" alt="" class="animated fadeIn u-full-width">
+    		</div>
+    	</div>
+    <div class="six columns padding">
+  		<div class="row">
+				<p>
+					<a style="text-decoration: none;"
+					ui-sref="app.category({id:category.id})">
+					{{category.name}}</a> 
+					> 
+					<b>{{product.name}}</b>
+				</p>
+			</div>
+  		<h1>{{product.name}}</h1>
+			<div class="row">
+				<div class="price">
+				<h2>{{product.price | currency}}</h2>
+			</div>
+			<div class="former-price">
+				<h2>$25</h2>
+			</div>
+			</div>
+				<p>Cum ceteris in veneratione tui montes, nascetur mus. Unam incolunt Belgae, aliam Aquitani, tertiam. Cum sociis natoque penatibus et magnis dis parturient.</p>
+			<hr>
+			<div class="branded-logo">
+	      <label for="repeatSelect">Overlay Logo</label>
+	      <select
+	      name="repeatSelect"
+	      id="repeatSelect"
+	      ng-model="overlayBrands.selected"
+	      class="u-full-width">
+	      <option value="null">Select a brand:</option>
+	      <option ng-repeat="brand in overlayBrands.brands" value="{{brand.image}}">{{brand.name}}</option>
+	    	</select>
+			</div>
+			<div ng-hide="brandDropdown.brands.length == 0" class="branded-logo">
+	      <label for="repeatSelect">Branded Logo</label>
+	      <select
+	      name="repeatSelect"
+	      id="repeatSelect"
+	      ng-model="brandDropdown.selected"
+	      class="u-full-width"
+	      ng-options="option.brandName for option in brandDropdown.brands">
+	    	</select>
+			</div>
+			<div class="quantity">
+				<label for="quantity">Quantity</label>
+				<select name="quantity" id="quantity">
+					<option value="1000">1000</option>
+				</select>
+			</div>
+			<button class="button-primary pull-right gap-top" ng-click="addToCart(brandDropdown.selected)">Add to Cart</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row animated fadeIn">
+  	<h4>Similiar Products</h4>
+  	<div class="thumb padding" ng-repeat="product in productsInCategory"
+  	ui-sref="app.product({id: product.id})">
+  		<div class="u-full-width">
+  			<img ng-src="{{product.image}}" alt="" class="u-full-width">
+				<p>{{product.name}}</p>
+  		</div>
+  	</div>
+  </div>
+</div>

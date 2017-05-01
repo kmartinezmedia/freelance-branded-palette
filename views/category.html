@@ -1,0 +1,14 @@
+<div class="hero-image" ng-background="{{category.attributes.image._url}}">
+	<img ng-src="img/{{category.subdomain}}.svg" alt="" class="logo animated fadeIn">
+</div>
+<div class="container">
+  <div class="row triple-gap-top triple-gap-bottom">
+		<div 	class="product-card animated fadeIn"
+      ng-repeat="product in products"
+			ui-sref="app.product({id: product.id})">
+      <div class="image" ng-background="{{product.image}}"></div>
+<!-- 			<img src="img/no_product_image.svg" alt="" class="u-full-width"> -->
+			<p class="align-center">{{product.name}}</p>
+		</div>
+  </div>
+</div>

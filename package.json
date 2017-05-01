@@ -1,0 +1,20 @@
+{
+  "name": "freelance-branded-pallette",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=development node server.js",
+    "pm2:delete": "pm2 delete kmartinezmedia.com/freelance-branded-pallette",
+    "pm2": "NODE_ENV=production pm2 start server.js --name kmartinezmedia.com/freelance-branded-pallette",
+    "production": "git pull && NODE_ENV=production pm2 restart kmartinezmedia.com/freelance-branded-pallette"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.6.1",
+    "dotenv": "^4.0.0",
+    "serve-static": "^1.12.2"
+  }
+}

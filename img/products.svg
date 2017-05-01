@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="506px" height="506px" viewBox="0 0 506 506" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 1 + BRANDED + Rectangle 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="1024" sketch:type="MSArtboardGroup" transform="translate(-259.000000, -259.000000)">
+            <g id="Rectangle-1-+-BRANDED-+-Rectangle-2" sketch:type="MSLayerGroup" transform="translate(259.000000, 259.000000)">
+                <rect id="Rectangle-1" fill="#FD6366" sketch:type="MSShapeGroup" x="0" y="0" width="506" height="506"></rect>
+                <text id="ALL" sketch:type="MSTextLayer" font-family="Helvetica" font-size="65" font-weight="bold" sketch:alignment="middle" line-spacing="82" letter-spacing="-1.72058833" fill="#FFFFFF">
+                    <tspan x="192.405834" y="230">ALL</tspan>
+                    <tspan x="77.5141892" y="312">PRODUCTS</tspan>
+                </text>
+                <rect id="Rectangle-2" stroke="#FFFFFF" stroke-width="8" sketch:type="MSShapeGroup" x="25" y="25" width="456" height="456"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
